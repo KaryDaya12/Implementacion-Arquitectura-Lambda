@@ -40,6 +40,8 @@ usuarios = [f"Cliente_{i}" for i in range(1, 11)]
 
 historico = pd.read_csv("historico_cafeteria_2025.csv")
 
+historico["valoracion"] = pd.to_numeric(historico["valoracion"], errors="coerce")
+
 st.dataframe(historico.head(), use_container_width=True)
 st.info("Estos datos representan las valoraciones históricas de los clientes del Café Aroma.")
 
