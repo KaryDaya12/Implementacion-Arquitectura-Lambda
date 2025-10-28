@@ -108,9 +108,3 @@ st.success(f"🥇 Recomendación destacada del momento: **{top_plato}**")
 # Visualización gráfica
 st.subheader("📈 Valoraciones promedio por plato")
 st.bar_chart(recomendaciones.set_index("plato"))
-
-# -----------------------------------------------------------
-# PIE DE PÁGINA
-# -----------------------------------------------------------
-st.markdown("---")
-st.caption("Simulación de Arquitectura Lambda | Proyecto académico - Big Data | Café Aroma ☕")
