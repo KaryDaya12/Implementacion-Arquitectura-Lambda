@@ -8,16 +8,9 @@ from datetime import datetime
 # TÍTULO Y DESCRIPCIÓN
 # -----------------------------------------------------------
 st.set_page_config(page_title="Recomendador Café Aroma", page_icon="☕", layout="centered")
-st.title("☕ Recomendador de Platos - Arquitectura Lambda (Café Aroma)")
+st.title("☕ Recomendador de Platos - Arquitectura Lambda (Café Quiteñito)")
 
-st.markdown("""
-Este proyecto demuestra cómo funciona la **Arquitectura Lambda** aplicada a un **sistema de recomendación híbrido**.
-Se compone de tres capas:
-1. 🧩 **Capa Batch:** Procesa datos históricos de valoraciones.  
-2. ⚡ **Capa de Velocidad:** Recibe valoraciones nuevas en tiempo real.  
-3. 💡 **Capa de Servicio:** Combina ambas para generar recomendaciones actualizadas.
----
-""")
+
 
 # -----------------------------------------------------------
 # CAPA BATCH - Datos históricos simulados
