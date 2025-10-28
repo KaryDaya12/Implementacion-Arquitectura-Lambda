@@ -38,13 +38,7 @@ st.header("🧩 Capa Batch - Datos históricos")
 platos = ["Capuccino", "Latte", "Mocaccino", "Cheesecake", "Croissant", "Sandwich de Jamón"]
 usuarios = [f"Cliente_{i}" for i in range(1, 11)]
 
-np.random.seed(42)
-historico = pd.DataFrame({
-    "usuario": np.random.choice(usuarios, 1000),
-    "plato": np.random.choice(platos, 1000),
-    "valoracion": np.random.randint(3, 6, 1000),
-    "fecha": pd.date_range("2025-09-01", periods=1000, freq="D")
-})
+historico = pd.read_csv("historico_cafeteria_2025.csv")
 
 st.dataframe(historico.head(), use_container_width=True)
 st.info("Estos datos representan las valoraciones históricas de los clientes del Café Aroma.")
