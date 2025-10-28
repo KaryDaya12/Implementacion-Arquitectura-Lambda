@@ -3,12 +3,30 @@ import pandas as pd
 import numpy as np
 import random
 from datetime import datetime
+from PIL import Image
+
+# ---------------------- Configuración de página ----------------------
+
+st.set_page_config(page_title="Recomendador Café Quiteñito", page_icon="☕", layout="wide")
+st.title("☕ Recomendador de Platos - Arquitectura Lambda (Café Quiteñito)")
+
+# ---------------------- Inyectar estilos personalizados ----------------------
+with open("style/main.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# ---------------------- Mostrar logo y título ----------------------
+logo = Image.open("Imagenes/logotecazuay.PNG")
+col1, col2 = st.columns([3, 1])
+with col1:
+    st.title("📊  Café Quiteñito")
+    st.markdown("#### Realizado por Karina Chisaguano")
+with col2:
+    st.image(logo, width=250)
 
 # -----------------------------------------------------------
 # TÍTULO Y DESCRIPCIÓN
 # -----------------------------------------------------------
-st.set_page_config(page_title="Recomendador Café Aroma", page_icon="☕", layout="centered")
-st.title("☕ Recomendador de Platos - Arquitectura Lambda (Café Quiteñito)")
+
 
 
 
